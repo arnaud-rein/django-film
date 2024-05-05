@@ -16,7 +16,7 @@
     <h1> you search for :  
         
         {% for film in films %}
-        {{ film.title }}
+        <a href="{% url 'film_detail' film_id=film.id %}">{{ film.title }}</a>
         {% endfor %}
     </h1>
         

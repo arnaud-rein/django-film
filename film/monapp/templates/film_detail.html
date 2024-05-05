@@ -1,0 +1,10 @@
+<h1>{{ film.title }}</h1>
+
+<p><strong>Year:</strong> {{ film.year }}</p>
+<p><strong>Style:</strong> {{ film.style }}</p>
+<p><strong>Director:</strong> {{ film.director }}</p>
+<p><strong>Description:</strong> {{ film.description }}</p>
+<p><strong>Created at:</strong> {{ film.created_at }}</p>
+<p><strong>Updated at:</strong> {{ film.updated_at }}</p>
+
+<a href="{% url 'movie' %}">Back to film list</a>

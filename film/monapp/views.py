@@ -22,3 +22,8 @@ def search(request):
                                                    })
     else:    
         return render(request, 'search_bar.html')
+    
+
+def film_detail(request, film_id):
+    film = Film.objects.get(id=film_id)
+    return render(request, 'film_detail.html', {'film': film})
