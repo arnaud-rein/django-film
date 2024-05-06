@@ -27,17 +27,22 @@ class filmListView(ListView):
 
 def search(request):
     if request.method == 'POST':
-        print('dans le post')
+        
         searched = request.POST['searched']
         films = Film.objects.filter(title__icontains=searched)
         print("films => ")
         print(films)
         if not films.exists():
             data = get_movie_data(searched)
-            print("data=>")
-            print(data)
+            
             if data is not None:
-                # return render(request, 'movie_api.html', {'movies': data})
+
+                Film.objects.create(title=data['Title'],
+                                    year=data['Year'],
+                                    style=data['Genre'],
+                                    director=data['Director'],           
+                                    description=data['Plot'])
+                
                 return render(request, 'search_bar.html', {'movies': data})
             else:
                 return render(request, 'error_template.html', {'error': 'Failed to retrieve data'})
@@ -65,13 +70,6 @@ def get_movie_data(title):
         return None
 
 
-# def movie_view(request, title):
-#     data = get_movie_data()
-#     if data is not None:
-#         return render(request, 'movie_api.html', {'movies': data})
-#     else:
-#         return render(request, 'error_template.html', {'error': 'Failed to retrieve data'})
-    
 
 def movie_view(request, title):
     try:
@@ -83,3 +81,12 @@ def movie_view(request, title):
             return render(request, 'movie_api.html', {'movies': data})
         else:
             return render(request, 'error_template.html', {'error': 'Failed to retrieve data'})
+        
+
+# def movie_view(request, title):
+#     data = get_movie_data()
+#     if data is not None:
+#         return render(request, 'movie_api.html', {'movies': data})
+#     else:
+#         return render(request, 'error_template.html', {'error': 'Failed to retrieve data'})
+    
