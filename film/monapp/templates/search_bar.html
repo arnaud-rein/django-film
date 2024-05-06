@@ -1,16 +1,21 @@
+
 <!DOCTYPE html>
 <html>
+    
 <body>
+
+    
+   {% include 'navbar.html' %}
 
 <h1>Movies</h1>
 <p> Here are the movies in the database </p>
 
-<form action="search" method="POST">
+<!-- <form action="search" method="POST">
     {% csrf_token %}
   <input type="text" name="searched" placeholder="Search for movies">
   <button type="submit">Search</button>
 
-</form>
+</form> -->
 
 {% if films %}
     <h1> you search for :  

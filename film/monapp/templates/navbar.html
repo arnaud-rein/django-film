@@ -1,0 +1,31 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+</head>
+<body>
+
+    <nav> 
+        <div id="logo"> 
+            <a href=""> <img id="img-logo" src="{% static 'img/logo-film.png' %}" alt="logo"></a>
+        </div>
+        <form action="search" method="POST">
+            {% csrf_token %}
+          <input type="text" name="searched" placeholder="Search for movies">
+          <button type="submit">Search</button>
+        
+        </form>
+        <div id="links">
+            <li><a href="{% url 'movie' %}">Liste film</a></li>
+            
+        </div>
+
+    </nav>
+    
+</body>
+</html>
