@@ -7,7 +7,6 @@ from urllib.parse import quote
 
 # Create your views here.
 
-
 class filmListView(ListView):
     model = Film
     template_name = 'all_movies.html'
@@ -15,23 +14,16 @@ class filmListView(ListView):
     
     queryset = Film.objects.all()
 
-# def search(request):
-#     if request.method == 'POST':
-#         search = request.POST['searched']
-#         films = Film.objects.filter(title__contains=search)
-#         return render(request, 'search_bar.html', {'films': films})    
-
-#     else:    
-#         return render(request, 'search_bar.html')   
-
 
 def search(request):
     if request.method == 'POST':
         
         searched = request.POST['searched']
-        films = Film.objects.filter(title__icontains=searched)
+        films = Film.objects.filter(title__icontains=searched) 
         print("films => ")
         print(films)
+        
+
         if not films.exists():
             data = get_movie_data(searched)
             
@@ -83,10 +75,5 @@ def movie_view(request, title):
             return render(request, 'error_template.html', {'error': 'Failed to retrieve data'})
         
 
-# def movie_view(request, title):
-#     data = get_movie_data()
-#     if data is not None:
-#         return render(request, 'movie_api.html', {'movies': data})
-#     else:
-#         return render(request, 'error_template.html', {'error': 'Failed to retrieve data'})
-    
+def homepage(request):
+    return render(request, 'homepage.html', {})
