@@ -19,6 +19,22 @@
         <a href="{% url 'film_detail' film_id=film.id %}">{{ film.title }}</a>
         {% endfor %}
     </h1>
+
+{% elif movies %}
+    <h1> you search for :  
+        
+        {% for movie in movies %}
+        <a href="">{{ movie.Title }}</a>
+        {% endfor %}
+    </h1>
+
+{% elif searched %}
+    <h1> you search for :  
+        
+        {% for search in searched %}
+        <a href="{% url 'film_detail' film_id=search.id %}">{{ search.title }}</a>
+        {% endfor %}
+    </h1>
         
 {% else %}
     <h1> you search for nothing </h1>

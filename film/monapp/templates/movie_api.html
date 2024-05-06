@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ movies.Title }}</title>
+</head>
+<body>
+    <h1>{{ movies.Title }}</h1>
+    <p><strong>Year:</strong> {{ movies.Year }}</p>
+    <p><strong>Director:</strong> {{ movies.Director }}</p>
+    <p><strong>Actors:</strong> {{ movies.Actors }}</p>
+    <p><strong>Plot:</strong> {{ movies.Plot }}</p>
+    <p><strong>Genre:</strong> {{ movies.Genre }}</p>
+    <p><strong>Language:</strong> {{ movies.Language }}</p>
+    <img src="{{ movies.Poster }}" alt="Movie Poster">
+    <p><strong>Ratings:</strong></p>
+    <ul>
+        {% for rating in movies.Ratings %}
+            <li>{{ rating.Source }}: {{ rating.Value }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
