@@ -1,21 +1,21 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html>
-    
+    <head>
+        <meta charset="UTF-8">
+        <title>Search Bar</title>
+        <link rel="stylesheet" href="{% static 'css/margin.css' %}">
+    </head>
 <body>
 
     
    {% include 'navbar.html' %}
 
+   <div class="margin">
 <h1>Movies</h1>
 <p> Here are the movies in the database </p>
 
-<!-- <form action="search" method="POST">
-    {% csrf_token %}
-  <input type="text" name="searched" placeholder="Search for movies">
-  <button type="submit">Search</button>
 
-</form> -->
 
 {% if films %}
     <h1> you search for :  
@@ -35,17 +35,11 @@
      
     </h1>
 
-{% elif searched %}
-    <h1> you search for :  
-        
-        {% for search in searched %}
-        <a href="{% url 'film_detail' film_id=search.id %}">{{ search.title }}</a>
-        {% endfor %}
-    </h1>
+
         
 {% else %}
     <h1> you search for nothing </h1>
 {% endif %}
-
+    </div>
 </body>
 </html>

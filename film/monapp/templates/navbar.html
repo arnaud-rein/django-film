@@ -10,11 +10,13 @@
 </head>
 <body>
 
+   
+
     <nav> 
         <div id="logo"> 
-            <a href=""> <img id="img-logo" src="{% static 'img/logo-film.png' %}" alt="logo"></a>
+            <a href="{% url 'homepage' %}"> <img id="img-logo" src="{% static 'img/logo-film.png' %}" alt="logo"></a>
         </div>
-        <form action="search" method="POST">
+        <form action="/film/search" method="POST">
             {% csrf_token %}
           <input type="text" name="searched" placeholder="Search for movies">
           <button type="submit">Search</button>

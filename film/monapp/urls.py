@@ -10,7 +10,8 @@ urlpatterns = [
     path("/search", views.search, name="search"),
     path("/api", views.movie_view, name="api"),
     path('/detail/<int:film_id>/', views.film_detail, name='film_detail'),
-    path('film/<str:title>/', views.movie_view, name='film_name'),
+    path('/film/<str:title>/', views.movie_view, name='film_name'),
+    path('/homepage', views.homepage , name='homepage'),
    
   
 ]
