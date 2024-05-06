@@ -15,8 +15,26 @@
 {% if films %}
     <h1> you search for :  
         
+        <ul> 
         {% for film in films %}
-        <a href="{% url 'film_detail' film_id=film.id %}">{{ film.title }}</a>
+
+           <li> <a href="{% url 'film_detail' film_id=film.id %}">{{ film.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </h1>
+
+{% elif movies %}
+    <h1> you search for :        
+                
+        <a href="{% url 'film_name' title=movies.Title %}">{{ movies.Title }}</a>
+     
+    </h1>
+
+{% elif searched %}
+    <h1> you search for :  
+        
+        {% for search in searched %}
+        <a href="{% url 'film_detail' film_id=search.id %}">{{ search.title }}</a>
         {% endfor %}
     </h1>
         
