@@ -19,9 +19,11 @@ def search(request):
     if request.method == 'POST':
         
         searched = request.POST['searched']
-        films = Film.objects.filter(title__icontains=searched)
+        films = Film.objects.filter(title__icontains=searched) 
         print("films => ")
         print(films)
+        
+
         if not films.exists():
             data = get_movie_data(searched)
             
