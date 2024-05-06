@@ -21,11 +21,10 @@
     </h1>
 
 {% elif movies %}
-    <h1> you search for :  
-        
-        {% for movie in movies %}
-        <a href="">{{ movie.Title }}</a>
-        {% endfor %}
+    <h1> you search for :        
+                
+        <a href="{% url 'film_name' title=movies.Title %}">{{ movies.Title }}</a>
+     
     </h1>
 
 {% elif searched %}

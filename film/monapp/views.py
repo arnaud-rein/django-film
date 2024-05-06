@@ -37,7 +37,8 @@ def search(request):
             print("data=>")
             print(data)
             if data is not None:
-                return render(request, 'movie_api.html', {'movies': data})
+                # return render(request, 'movie_api.html', {'movies': data})
+                return render(request, 'search_bar.html', {'movies': data})
             else:
                 return render(request, 'error_template.html', {'error': 'Failed to retrieve data'})
         return render(request, 'search_bar.html', {'films': films, 'searched': searched})
