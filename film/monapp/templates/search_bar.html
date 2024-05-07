@@ -12,13 +12,13 @@
    {% include 'navbar.html' %}
 
    <div class="margin">
-<h1>Movies</h1>
-<p> Here are the movies in the database </p>
+<h1>Recherche : </h1>
+<p> liste des films : </p>
 
 
 
 {% if films %}
-    <h1> you search for :  
+    <h1> Recherche pour  :  
         
         <ul> 
         {% for film in films %}
@@ -29,7 +29,7 @@
     </h1>
 
 {% elif movies %}
-    <h1> you search for :        
+    <h1> Recherche pour  :       
                 
         <a href="{% url 'film_name' title=movies.Title %}">{{ movies.Title }}</a>
      
@@ -38,7 +38,7 @@
 
         
 {% else %}
-    <h1> you search for nothing </h1>
+    <h1> Film non présent dans la base de données et dans l'api </h1>
 {% endif %}
     </div>
 </body>

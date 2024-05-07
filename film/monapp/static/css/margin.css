@@ -1,7 +1,51 @@
 .margin{
     margin-top: 70px;
+    padding: 0;    
+   
+}
+.margin-a{
+    margin-top: 60px;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
    
 }
 
 
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5px;
+    background-color: #dfe2e34f;
+    width: 100vw;
+    
+}
+
+.container-b{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 5px;
+    background-color: #bcbccf3a;
+    width: 100vw;
+    height: 80vh;
+    padding-top: 15vh;
+    /* gap: 5vw; */
+    
+    
+}
+
+.container-b div{
+    border: solid black 0.5px;
+    height: 30vh;
+    
+}
+.container-b div:hover{
+    box-shadow: 30px 30px 45px rgba(0,0,0,0.6);
+}
