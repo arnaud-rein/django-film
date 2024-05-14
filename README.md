@@ -1,4 +1,22 @@
 # django-film
+
+## Galerie d'images
+
+<div style="display: flex; flex-wrap: wrap;">
+  <div style="flex: 1 0 21%; margin: 5px;">
+    <img src="./images/homepage.png.png" alt="Description de l'image 1" style="width: 100%;">
+  </div>
+  <div style="flex: 1 0 21%; margin: 5px;">
+    <img src="./images/listes_films.png.png" alt="Description de l'image 2" style="width: 100%;">
+  </div>
+  <div style="flex: 1 0 21%; margin: 5px;">
+    <img src="./images/search.png.png" alt="Description de l'image 3" style="width: 100%;">
+  </div>
+  
+</div>
+
+
+
 Lien notion pour voir les détails de la conception du projet :
 \ 
 https://frosted-poison-c40.notion.site/django-film-572cebbf30424b9da226ab43c33ef9e0?pvs=4
