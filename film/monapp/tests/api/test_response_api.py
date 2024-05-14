@@ -1,8 +1,9 @@
 import unittest
-from monapp.views import get_movie_data # Remplacez 'your_module' par le nom de votre module
+from monapp.views import get_movie_data 
 
 class TestGetMovieData(unittest.TestCase):
     def test_get_movie_data(self):
+        print("test de fonctionnement pour voir si l'api répond")
         # Appellez la fonction avec un titre de film valide
         result = get_movie_data('Inception')
 
