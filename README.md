@@ -4,13 +4,13 @@
 
 <div style="display: flex; flex-wrap: wrap;">
   <div style="flex: 1 0 21%; margin: 5px;">
-    <img src="./images/homepage.png.png" alt="Description de l'image 1" style="width: 100%;">
+    <img src="https://github.com/arnaud-rein/django-film/blob/main/images/homepage.png" alt="Description de l'image 1" style="width: 100%;">
   </div>
   <div style="flex: 1 0 21%; margin: 5px;">
-    <img src="./images/listes_films.png.png" alt="Description de l'image 2" style="width: 100%;">
+    <img src="https://github.com/arnaud-rein/django-film/blob/main/images/listes_films.png.png" alt="Description de l'image 2" style="width: 100%;">
   </div>
   <div style="flex: 1 0 21%; margin: 5px;">
-    <img src="./images/search.png.png" alt="Description de l'image 3" style="width: 100%;">
+    <img src="https://github.com/arnaud-rein/django-film/blob/main/images/search.png.png" alt="Description de l'image 3" style="width: 100%;">
   </div>
   
 </div>
